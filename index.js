@@ -14,9 +14,9 @@ function mindGame(number){
     return result;
     }
 }
-const input = 5;
+const input = 50;
 const total = mindGame(input);
-// console.log(total);
+console.log(total);
 
 
 // Second
@@ -34,7 +34,7 @@ function evenOdd(str){
 }
 const myName = 'Rakibul';
 const totalCharacers = evenOdd(myName);
-// console.log(totalCharacers);
+console.log(totalCharacers);
 
 
 // Third
@@ -53,7 +53,7 @@ else if(numberDistance >= 7){
 }
 const number = 15;
 const totalResult = isLGSeven(number);
-// console.log(totalResult);
+console.log(totalResult);
 
 
 //Four
@@ -73,42 +73,30 @@ function findingBadData(arra){
 }
 const numbers = [12, 66, -54, -45, 67, -76, 56, 24, -56, -95];
 const badData = findingBadData(numbers);
-// console.log(badData);
+console.log(badData);
 
 
 //five
+// first, take friends 3 gems number. get out the total gems and find how much diamond get. if total diamond greaterthen 2000, then substracted the result by 2000 and return last result. 
+function gemsToDiamond(friend1, friend2, friend3){
+    const friend1Gems = 21;
+    const friend2Gems = 32;
+    const friend3Gems = 43;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    const friend1Diamond = friend1 * friend1Gems;
+    const friend2Diamond = friend2 * friend2Gems;
+    const friend3Diamond = friend3 * friend3Gems;
+    let totalDiamond = friend1Diamond + friend2Diamond + friend3Diamond;
+    // console.log(totalDiamond);
+    if(typeof friend1 !== 'number' || typeof friend2 !== 'number' || typeof friend3 !== 'number'){
+        return 'Please provide all valid number';
+    }
+    else if(totalDiamond > 1000 * 2){
+        return totalDiamond - 2000;
+    }
+    else{
+        return totalDiamond;
+    }
+}
+const friendsNumbers = gemsToDiamond(1, 1, 1);
+console.log(friendsNumbers);
